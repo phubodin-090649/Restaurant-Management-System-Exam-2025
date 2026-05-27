@@ -1,44 +1,51 @@
 # Restaurant Management System (RMS)
 
 > **ข้อสอบปฏิบัติการทดสอบและติดตั้งระบบซอฟต์แวร์เชิงธุรกิจ**  
-> รายวิชา: การออกแบบและพัฒนาซอฟต์แวร์ 1  
-> ชื่อ-นามสกุล: ___________________________  
-> รหัสนักศึกษา: ___________________________  
-> วันที่สอบ: ___________________________
+> รายวิชา: การออกแบบและพัฒนาซอฟต์แวร์ 1
+
+**✏️ กรอกข้อมูลของตนเอง:**
+
+| รายการ | ข้อมูล |
+|--------|--------|
+| ชื่อ-นามสกุล | |
+| รหัสนักศึกษา | |
+| วันที่สอบ | |
 
 ---
 
 ## Project Overview
 
-> ระบบจัดการร้านอาหาร (Restaurant Management System: RMS) เป็นระบบสำหรับจัดการเมนู การรับออเดอร์ การชำระเงิน และรายงานยอดขาย
+ระบบจัดการร้านอาหาร (Restaurant Management System: RMS) เป็นระบบสำหรับจัดการเมนู การรับออเดอร์ การชำระเงิน และรายงานยอดขาย
 
 **Source Repository:** `https://github.com/surachai-p/Restaurant-Management-System-Exam-2025.git`  
-**Student Fork / Repo:** `https://github.com/[รหัสนักศึกษา]/Restaurant-Management-System-Exam-2025.git`
+**✏️ Student Repository:** `https://github.com/[แทนที่ด้วยรหัสนักศึกษาของตนเอง]/Restaurant-Management-System-Exam-2025.git`
 
 ---
 
 ## Tech Stack
 
-| Layer      | Technology                                      |
-|------------|-------------------------------------------------|
-| Frontend   | React 18 + Vite + TypeScript + Tailwind CSS     |
-| Backend    | Node.js 22 LTS + Express + TypeScript           |
-| Database   | PostgreSQL 16 (Neon.tech)                       |
-| ORM        | Prisma                                          |
-| Testing    | Vitest (Unit) + Newman (E2E)                    |
-| Container  | Docker / Docker Compose                         |
-| CI/CD      | GitHub Actions                                  |
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18 + Vite + TypeScript + Tailwind CSS |
+| Backend | Node.js 22 LTS + Express + TypeScript |
+| Database | PostgreSQL 16 (Neon.tech) |
+| ORM | Prisma |
+| Testing | Vitest (Unit) + Newman (E2E) |
+| Container | Docker / Docker Compose |
+| CI/CD | GitHub Actions |
 
 ---
 
 ## Production URLs
 
-| Service            | URL                                      | Status |
-|--------------------|------------------------------------------|--------|
-| Frontend (Vercel)  | `https://[your-app].vercel.app`          | ⬜     |
-| Backend (Render)   | `https://[your-api].onrender.com`        | ⬜     |
-| API Health Check   | `https://[your-api].onrender.com/api/health` | ⬜ |
-| Database (Neon)    | `postgresql://...@...neon.tech/...`      | ⬜     |
+**✏️ แทนที่ URL placeholder ด้วย URL จริงหลัง Deploy เสร็จ แล้วเปลี่ยนสถานะเป็น ✅ หรือ ❌**
+
+| Service | URL (กรอก URL จริง) | สถานะ |
+|---------|---------------------|-------|
+| Frontend (Vercel) | | ☐ |
+| Backend (Render) | | ☐ |
+| API Health Check (`/api/health`) | | ☐ |
+| Database (Neon.tech connection string) | | ☐ |
 
 ---
 
@@ -49,71 +56,86 @@
 ### 1.1 ขอบเขตการทดสอบ (Test Scope)
 
 #### In Scope
-| Feature   | เหตุผลที่ทดสอบ |
-|-----------|----------------|
-| Auth      | ระบบ Login/Logout และ Role-based Access |
-| Menu      | CRUD เมนูและการจัดการสต็อก |
-| Order     | เปิดโต๊ะ รับออเดอร์ แก้ไข ยืนยัน |
-| Payment   | ชำระเงิน คำนวณทอน พิมพ์ใบเสร็จ |
-| Report    | ยอดขายรายวัน/รายเดือน เมนูขายดี |
-| Security  | JWT, RBAC, SQL Injection, XSS |
+**✏️ ระบุ Feature ที่จะทดสอบและเหตุผล (ตารางด้านล่างเป็นตัวอย่างเริ่มต้น แก้ไข/เพิ่มเติมได้)**
+
+| Feature | เหตุผลที่ทดสอบ |
+|---------|----------------|
+| Auth | |
+| Menu | |
+| Order | |
+| Payment | |
+| Report | |
+| Security | |
 
 #### Out of Scope
-| Feature       | เหตุผลที่ไม่ทดสอบ |
-|---------------|--------------------|
-| <!-- ตัวอย่าง --> Performance Load Test (JMeter) | ไม่อยู่ในขอบเขตของข้อสอบนี้ |
-| <!-- เพิ่มเติม --> | |
+**✏️ ระบุสิ่งที่ไม่ทดสอบและเหตุผล อย่างน้อย 1 รายการ**
+
+| Feature / ขอบเขตที่ไม่ทดสอบ | เหตุผล |
+|-----------------------------|--------|
+| | |
+| | |
 
 ---
 
 ### 1.2 แนวทางการทดสอบ (Test Approach)
 
-| ประเภทการทดสอบ           | เครื่องมือ       | รายละเอียด |
-|--------------------------|-----------------|------------|
-| Unit Testing             | Vitest          | ทดสอบฟังก์ชันใน Backend |
-| API Testing (E2E)        | Postman / Newman | ทดสอบ REST API endpoint ทั้งหมด |
-| Security Testing         | npm audit, Manual | ตรวจสอบช่องโหว่ Dependency และ API |
-| Smoke Testing            | Manual / Newman | ทดสอบ Feature หลัก 4 รายการบน Production |
-| Staging Deployment Test  | Docker Compose  | ทดสอบก่อน Deploy บน Cloud |
+**✏️ ระบุประเภทการทดสอบ เครื่องมือ และรายละเอียดที่จะใช้จริง (ตารางด้านล่างเป็นตัวอย่างเริ่มต้น)**
+
+| ประเภทการทดสอบ | เครื่องมือ | รายละเอียด |
+|----------------|-----------|------------|
+| Unit Testing | Vitest | |
+| API Testing (E2E) | Postman / Newman | |
+| Security Testing | npm audit | |
+| Smoke Testing | Manual | |
+| Staging Test | Docker Compose | |
 
 ---
 
 ### 1.3 สภาพแวดล้อมทดสอบ (Test Environment)
 
-| รายการ         | เวอร์ชัน / ค่า                     |
-|----------------|------------------------------------|
-| OS             | <!-- เช่น Windows 11 / Ubuntu 22.04 --> |
-| Node.js        | 22 LTS                             |
-| npm            | <!-- ระบุเวอร์ชัน -->               |
-| Docker         | <!-- ระบุเวอร์ชัน -->               |
-| PostgreSQL     | 16 (Neon.tech)                     |
-| Browser        | <!-- เช่น Chrome 124 -->            |
-| Newman         | <!-- ระบุเวอร์ชัน -->               |
+**✏️ กรอกเวอร์ชันจริงของเครื่องที่ใช้สอบ (รันคำสั่ง `node -v`, `npm -v`, `docker -v`, `newman -v` เพื่อตรวจสอบ)**
+
+| รายการ | เวอร์ชัน / ค่า |
+|--------|---------------|
+| OS | |
+| Node.js | |
+| npm | |
+| Docker | |
+| PostgreSQL | 16 (Neon.tech) |
+| Browser | |
+| Newman | |
 
 ---
 
 ### 1.4 เงื่อนไขการผ่าน/ไม่ผ่านการทดสอบ (Entry / Exit Criteria)
 
-#### Entry Criteria (เงื่อนไขเริ่มทดสอบ)
+#### Entry Criteria — ✏️ ทำเครื่องหมาย ✅ เมื่อทำสำเร็จแล้ว
 - [ ] Repository ถูก Clone และรัน Backend + Frontend ได้
 - [ ] Database เชื่อมต่อ Neon.tech สำเร็จ
 - [ ] `/api/health` ตอบกลับ `{"status":"ok"}`
 - [ ] Postman Collection พร้อมสำหรับ Newman
 
 #### Exit Criteria (เงื่อนไขผ่านการทดสอบ)
-- Newman Pass Rate ≥ **80%** ถือว่าพร้อมติดตั้ง
-- ไม่มี Bug ระดับ **Critical** ที่ยังไม่ได้แก้ไข
-- Smoke Test ผ่านทุก 4 Feature หลักบน Production
+**✏️ ระบุเงื่อนไขที่ถือว่าผ่านการทดสอบและพร้อม Deploy**
+
+| เงื่อนไข | ค่าที่กำหนด |
+|---------|------------|
+| Newman Pass Rate ขั้นต่ำ | ≥ ___% |
+| Bug ระดับ Critical ที่ยังเปิดอยู่ | ≤ ___ รายการ |
+| Smoke Test บน Production ผ่าน | ___ / 4 Feature |
 
 ---
 
 ### 1.5 ความเสี่ยงเชิงธุรกิจ (Business Risk)
 
+> **✏️ ระบุ Feature ของระบบ RMS ที่หากเกิดความผิดพลาดแล้วจะกระทบการดำเนินธุรกิจ อย่างน้อย 2 รายการ**  
+> ระดับความเสี่ยง: `Critical` / `High` / `Medium` / `Low`
+
 | # | Feature ที่มีความเสี่ยง | ผลกระทบหากเกิดความผิดพลาด | ระดับความเสี่ยง |
 |---|------------------------|--------------------------|----------------|
-| 1 | Payment (ชำระเงิน)      | ร้านไม่สามารถรับเงินได้ ลูกค้ารอนาน เสียรายได้โดยตรง | Critical |
-| 2 | Order (รับออเดอร์)      | ออเดอร์ไม่ถึงครัว อาหารไม่ถูกจัดเตรียม ลูกค้าไม่พอใจ | High |
-| <!-- เพิ่มอย่างน้อย 2 รายการ --> | | | |
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
 
 ---
 
@@ -121,188 +143,306 @@
 
 > **ส่วนที่ 2 — กรณีทดสอบ (8 คะแนน)**
 
-### กรณีทดสอบทั้งหมด (≥ 10 กรณี)
+### กรณีทดสอบทั้งหมด (≥ 10 กรณี — sub-category: Positive ≥ 3 | Negative ≥ 3 | Security ≥ 3 | Edge ≥ 2)
 
-| TC-ID   | Type     | Feature  | Scenario                        | Input                                             | Expected Result          | Actual Result | Pass/Fail |
-|---------|----------|----------|---------------------------------|---------------------------------------------------|--------------------------|---------------|-----------|
-| TC-001  | Positive | Auth     | Login ด้วย credential ถูกต้อง  | `{username: "admin", password: "Admin@123"}`      | HTTP 200 + JWT Token     |               | ⬜        |
-| TC-002  | Positive | Menu     | เพิ่มเมนูใหม่สำเร็จ            | `{name: "ข้าวผัด", price: 60, stock: 100}`        | HTTP 201 + menu object   |               | ⬜        |
-| TC-003  | Positive | Payment  | ชำระเงินและรับเงินทอนถูกต้อง   | `{orderId: 1, amount: 200}`                       | HTTP 200 + change = X    |               | ⬜        |
-| TC-004  | Negative | Auth     | Login ด้วย password ผิด        | `{username: "admin", password: "wrong"}`          | HTTP 401 Unauthorized    |               | ⬜        |
-| TC-005  | Negative | Order    | เพิ่มสินค้าที่หมดสต็อก         | `{menuId: 99, quantity: 999}`                     | HTTP 400 + error message |               | ⬜        |
-| TC-006  | Negative | Payment  | ชำระเงินน้อยกว่ายอดรวม        | `{orderId: 1, amount: 10}`                        | HTTP 400 Insufficient    |               | ⬜        |
-| TC-007  | Security | Auth     | เรียก API โดยไม่มี JWT Token   | GET /api/orders (no header)                       | HTTP 401 Unauthorized    |               | ⬜        |
-| TC-008  | Security | Order    | Cashier เข้าถึง Admin endpoint | Token ของ Cashier + DELETE /api/menu/1            | HTTP 403 Forbidden       |               | ⬜        |
-| TC-009  | Security | Auth     | SQL Injection ใน Login field   | `{username: "' OR 1=1 --", password: "x"}`        | HTTP 401 (ไม่ผ่าน Login) |               | ⬜        |
-| TC-010  | Edge     | Order    | ออเดอร์ที่ไม่มีสินค้า (0 ชิ้น) | `{tableId: 1, items: []}`                         | HTTP 400 + error message |               | ⬜        |
-| TC-011  | Edge     | Payment  | ชำระเงินพอดียอด (change = 0)   | `{orderId: 1, amount: exactTotal}`                | HTTP 200 + change = 0    |               | ⬜        |
-| <!-- เพิ่มกรณีทดสอบ --> | | | | | | | |
+**✏️ กรอกข้อมูลทุกคอลัมน์ให้ครบ รวมถึง Actual Result และ Pass/Fail หลังทดสอบจริง**
 
-**สรุปผล:** ผ่าน ___ / ___ กรณี (___%)
+| TC-ID | Type | Feature | Scenario | Input | Expected Result | Actual Result | Pass/Fail |
+|-------|------|---------|----------|-------|----------------|---------------|-----------|
+| TC-001 | Positive | Auth | Login ด้วย credential ถูกต้อง | `{username: "admin", password: "Admin@123"}` | HTTP 200 + JWT Token | | ☐ |
+| TC-002 | Negative | Auth | Login ด้วย password ผิด | `{username: "admin", password: "wrong"}` | HTTP 401 Unauthorized | | ☐ |
+| TC-003 | Security | Auth | เรียก API โดยไม่มี JWT Token | GET /api/orders (no Authorization header) | HTTP 401 Unauthorized | | ☐ |
+| TC-004 | Edge | Payment | ชำระเงินพอดียอด (change = 0) | `{orderId: 1, amount: exactTotal}` | HTTP 200 + change = 0 | | ☐ |
+| TC-005 | Positive | | | | | | ☐ |
+| TC-006 | Positive | | | | | | ☐ |
+| TC-007 | Negative | | | | | | ☐ |
+| TC-008 | Negative | | | | | | ☐ |
+| TC-009 | Security | | | | | | ☐ |
+| TC-010 | Security | | | | | | ☐ |
+| TC-011 | Edge | | | | | | ☐ |
+
+**✏️ สรุปผล:** ผ่าน ___ / ___ กรณี (___%)
 
 ---
 
 ## Test Reports
 
-> **ส่วนที่ 3 (ต่อ) — ผลการรัน Newman**
+> **ส่วนที่ 3 — การทดสอบและรายงานผล (20 คะแนน)**
+
+### Postman Test Evidence
+> Rubric 1.4: สร้าง Collection + ตั้งค่า Environment + รันครบ + บันทึกผล + แนบรูป
+
+#### ชื่อ Collection และไฟล์ที่ Export
+
+**✏️ แทนที่ `[รหัสนักศึกษา]` ด้วยรหัสจริง**
+
+| รายการ | ค่าจริง |
+|--------|--------|
+| Collection Name | `RMS-[รหัสนักศึกษา]-TestSuite` |
+| ไฟล์ที่ Export ไปไว้ใน Repository | `tests/postman/RMS-[รหัสนักศึกษา]-TestSuite.json` |
+| ไฟล์ Environment | `tests/postman/env.json` |
+
+> 📌 Repository มี Newman Collection 21 test cases ใน `tests/postman/` อยู่แล้ว  
+> นักศึกษาต้องสร้าง Collection ของตนเองที่ครอบคลุมกรณีทดสอบในส่วนที่ 2
+
+#### Environment Variables ที่ต้องตั้งค่าใน Postman
+
+**✏️ ค่าในคอลัมน์ "ค่าที่ตั้งจริง" ให้กรอกหลังจาก Login สำเร็จและได้ Token มาแล้ว**
+
+| Variable | ค่าที่ตั้งจริง | ใช้สำหรับ |
+|----------|--------------|-----------|
+| `{{base_url}}` | | Base URL ของ Backend API |
+| `{{token}}` | (JWT จาก Login ด้วย Cashier/Waiter) | Request ที่ต้องใช้ Token |
+| `{{admin_token}}` | (JWT จาก Login ด้วย Admin) | Request ที่ต้องการสิทธิ์ Admin |
+
+#### pm.test Scripts ใน Collection
+> ⚠️ ทุก Request ใน Collection ต้องมี `pm.test(...)` ตรวจสอบ Response  
+> ตัวอย่าง:
+> ```javascript
+> pm.test("Status code is 200", function () {
+>     pm.response.to.have.status(200);
+> });
+> pm.test("Response has JWT token", function () {
+>     const jsonData = pm.response.json();
+>     pm.expect(jsonData).to.have.property('token');
+> });
+> ```
+
+**✏️ ยืนยันว่าทุก Request มี pm.test แล้ว:** ☐ ใช่
+
+#### สรุปผลการรัน Postman (กรอกหลังรัน Collection Run)
+
+**✏️ กรอกผลจริงจาก Postman Collection Runner**
+
+| Request Name | Method | Endpoint | Actual Result | Pass/Fail |
+|-------------|--------|----------|--------------|-----------|
+| | | | | ☐ |
+| | | | | ☐ |
+| | | | | ☐ |
+
+**✏️ สรุป:** ผ่าน ___ / ___ Request
+
+#### หลักฐานภาพหน้าจอ Postman
+
+**✏️ แทนที่ข้อความด้านล่างด้วยภาพจริง โดยใช้ syntax: `![คำอธิบาย](./tests/reports/ชื่อไฟล์.png)`**
+
+**รูปที่ 1 — Postman Collection และ Environment Variables (แสดง `base_url`, `token`, `admin_token` ครบ)**
+
+`![Postman Collection + Env Vars](./tests/reports/postman-collection-env.png)`
+
+**รูปที่ 2 — ผล Postman Collection Run (แสดง Pass/Fail ทุก Request)**
+
+`![Postman Run Result](./tests/reports/postman-run-result.png)`
+
+---
 
 ### Newman E2E Test Summary
 
-```
-Collection: RMS-[รหัสนักศึกษา]-TestSuite
-Run Date:   YYYY-MM-DD HH:MM
+#### คำสั่งรัน Newman
 
-┌─────────────────────────┬──────────────────┐
-│                         │         executed │
-├─────────────────────────┼──────────────────┤
-│              iterations │                1 │
-│                requests │               ?? │
-│            test-scripts │               ?? │
-│      prerequest-scripts │               ?? │
-│              assertions │               ?? │
-├─────────────────────────┴──────────────────┤
-│ total run duration:     ???ms              │
-│ total data received:    ???B               │
-│ average response time:  ???ms              │
-└────────────────────────────────────────────┘
+```bash
+# ติดตั้ง Newman (ถ้ายังไม่ได้ติดตั้ง)
+npm install -g newman newman-reporter-htmlextra
+
+# รัน Collection
+newman run tests/postman/RMS-[รหัสนักศึกษา]-TestSuite.json \
+    --environment tests/postman/env.json \
+    --reporters cli,htmlextra \
+    --reporter-htmlextra-export tests/reports/newman-report.html
 ```
 
-**Pass Rate:** _____ / _____ (____%)  
-**Newman Report (HTML):** `./tests/reports/newman-report.html`
+#### ผลการรัน Newman (Local)
 
-> 📸 วางภาพหน้าจอผลการรัน Newman ที่นี่
+**✏️ วาง output จาก Terminal ที่ได้หลังรัน Newman แทนที่ข้อความ template ด้านล่างทั้งหมด**
+
+```
+[วาง Newman CLI output จริงที่นี่]
+```
+
+**✏️ กรอกตัวเลขจริงจาก Newman output:**
+
+| Metric | ค่าจริง |
+|--------|--------|
+| Total Requests | |
+| Tests Passed | |
+| Tests Failed | |
+| Pass Rate | % |
+
+**รูปที่ 3 — ผล Newman CLI (แสดง Pass/Fail summary)**
+
+`![Newman Run Result](./tests/reports/newman-cli-result.png)`
+
+---
+
+### Automated Testing via CI Pipeline
+> Rubric 1.6: สคริปต์อัตโนมัติ + รันผ่าน CI ได้ + บันทึกผล
+
+**✏️ ทำเครื่องหมาย ✅ เมื่อทำเสร็จแล้ว และแนบหลักฐานรูปภาพ**
+
+| รายการ | สถานะ |
+|--------|-------|
+| Newman Collection JSON อยู่ที่ `tests/postman/` ใน Repository | ☐ |
+| `.github/workflows/cicd.yml` มี step ติดตั้งและรัน Newman | ☐ |
+| GitHub Actions Pipeline รันสำเร็จ (สีเขียว) | ☐ |
+| Newman Pass Rate บันทึกอยู่ใน Pipeline log | ☐ |
+
+**✏️ Newman Pass Rate จาก CI/CD:** ___ / ___ (___%)
+
+**รูปที่ 4 — GitHub Actions Pipeline สำเร็จ (แสดง Newman step และ Pass Rate)**
+
+`![CI Pipeline Newman](./tests/reports/ci-pipeline-newman.png)`
 
 ---
 
 ## Security Scan Report
 
-> **ส่วนที่ 3.4 — npm audit Security Scan**
+> ส่วนที่ 3.4 — Rubric 1.7: รันทั้ง Backend + Frontend + บันทึกผล + ระบุ CVE + เพิ่มใน CI
 
 ### Backend Security Scan
 
 ```bash
-# คำสั่งที่รัน:
 cd backend && npm audit --audit-level=moderate
 ```
 
+**✏️ กรอกจำนวนช่องโหว่จริงที่พบ (ถ้าไม่มีให้ใส่ 0)**
+
 | Severity | จำนวน |
-|----------|--------|
-| Critical | 0      |
-| High     | 0      |
-| Medium   | 0      |
-| Low      | 0      |
-| **รวม**  | **0**  |
+|----------|-------|
+| Critical | |
+| High | |
+| Medium | |
+| Low | |
+| **รวม** | |
 
-#### รายละเอียด Dependency ที่มีช่องโหว่ระดับ High ขึ้นไป
+**✏️ กรอกรายละเอียด Dependency ที่มีช่องโหว่ระดับ High ขึ้นไป (ถ้าไม่มีให้ระบุ "ไม่พบช่องโหว่")**
 
-| Package | CVE ID | Severity | เวอร์ชันที่มีปัญหา | เวอร์ชันที่ปลอดภัย | สถานะ |
-|---------|--------|----------|--------------------|---------------------|-------|
-| <!-- ระบุรายละเอียด --> | | | | | |
+| Package | CVE ID | Severity | เวอร์ชันที่มีปัญหา | เวอร์ชันที่ปลอดภัย | สถานะการแก้ไข |
+|---------|--------|----------|--------------------|--------------------|--------------| 
+| | | | | | |
 
-**แก้ไขด้วย:**
-```bash
-npm audit fix
-```
+**รูปที่ 5 — ผล npm audit Backend**
+
+`![Backend npm audit](./tests/reports/npm-audit-backend.png)`
 
 ---
 
 ### Frontend Security Scan
 
 ```bash
-# คำสั่งที่รัน:
 cd frontend && npm audit --audit-level=moderate
 ```
 
+**✏️ กรอกจำนวนช่องโหว่จริงที่พบ**
+
 | Severity | จำนวน |
-|----------|--------|
-| Critical | 0      |
-| High     | 0      |
-| Medium   | 0      |
-| Low      | 0      |
-| **รวม**  | **0**  |
+|----------|-------|
+| Critical | |
+| High | |
+| Medium | |
+| Low | |
+| **รวม** | |
+
+**รูปที่ 6 — ผล npm audit Frontend**
+
+`![Frontend npm audit](./tests/reports/npm-audit-frontend.png)`
+
+### Security Scan ใน CI Pipeline (Rubric 1.7 ข้อ 4)
+
+**✏️ ยืนยันว่าได้เพิ่ม `npm audit --audit-level=high` ใน `.github/workflows/cicd.yml` แล้ว:** ☐ ใช่
+
+**รูปที่ 7 — GitHub Actions แสดง npm audit step รันสำเร็จ**
+
+`![CI Security Scan](./tests/reports/ci-security-scan.png)`
 
 ---
 
 ## Bug Reports
 
-> **ส่วนที่ 3 — รายงานข้อบกพร่อง (≥ 2 Bug)**
+> ส่วนที่ 3 — Rubric 1.5: รายงานข้อบกพร่อง อย่างน้อย 2 รายการ พร้อม Business Impact
 
 ---
 
-### BUG-001: [ชื่อ Bug สั้น ๆ]
+### BUG-001: [✏️ ชื่อ Bug สั้น ๆ อธิบายปัญหา]
 
-**Severity:** Critical / High / Medium / Low  
-**Priority:** P1 / P2 / P3  
-**Feature:** [Feature ที่มีปัญหา เช่น Payment]  
-**Status:** Open / Fixed
+| รายการ | ค่า |
+|--------|-----|
+| **Severity** | (เลือก: Critical / High / Medium / Low) |
+| **Priority** | (เลือก: P1 / P2 / P3) |
+| **Feature** | |
+| **Status** | (เลือก: Open / Fixed) |
 
 #### Steps to Reproduce
-1. ...
-2. ...
-3. ...
+**✏️ ระบุขั้นตอนที่ทำให้เกิด Bug ซ้ำได้ชัดเจน**
+1. 
+2. 
+3. 
 
 #### Expected Result
-> [สิ่งที่ควรเกิดขึ้น]
+> ✏️ 
 
 #### Actual Result
-> [สิ่งที่เกิดขึ้นจริง]
+> ✏️ 
 
 #### Evidence
-> 📸 วางภาพหน้าจอที่นี่  
-> `![BUG-001 Screenshot](./tests/reports/bug-001.png)`
+
+`![BUG-001](./tests/reports/bug-001.png)`
 
 #### Business Impact
-> [ผลกระทบต่อธุรกิจ — เช่น ลูกค้าชำระเงินไม่ได้ ทำให้ร้านเสียรายได้]
+> ✏️ ระบุผลกระทบต่อการดำเนินธุรกิจของร้านอาหาร
 
 ---
 
-### BUG-002: [ชื่อ Bug สั้น ๆ]
+### BUG-002: [✏️ ชื่อ Bug สั้น ๆ อธิบายปัญหา]
 
-**Severity:** Critical / High / Medium / Low  
-**Priority:** P1 / P2 / P3  
-**Feature:** [Feature ที่มีปัญหา]  
-**Status:** Open / Fixed
+| รายการ | ค่า |
+|--------|-----|
+| **Severity** | (เลือก: Critical / High / Medium / Low) |
+| **Priority** | (เลือก: P1 / P2 / P3) |
+| **Feature** | |
+| **Status** | (เลือก: Open / Fixed) |
 
 #### Steps to Reproduce
-1. ...
-2. ...
-3. ...
+**✏️ ระบุขั้นตอนที่ทำให้เกิด Bug ซ้ำได้ชัดเจน**
+1. 
+2. 
+3. 
 
 #### Expected Result
-> [สิ่งที่ควรเกิดขึ้น]
+> ✏️ 
 
 #### Actual Result
-> [สิ่งที่เกิดขึ้นจริง]
+> ✏️ 
 
 #### Evidence
-> 📸 วางภาพหน้าจอที่นี่  
-> `![BUG-002 Screenshot](./tests/reports/bug-002.png)`
+
+`![BUG-002](./tests/reports/bug-002.png)`
 
 #### Business Impact
-> [ผลกระทบต่อธุรกิจ]
+> ✏️ ระบุผลกระทบต่อการดำเนินธุรกิจของร้านอาหาร
 
 ---
 
 ## Deployment Guide
 
-> **ส่วนที่ 4 & 5 — คู่มือการติดตั้ง**
+> ส่วนที่ 4 & 5 — คู่มือการติดตั้ง
 
 ### Prerequisites
 
-| รายการ       | เวอร์ชันที่ต้องการ | ลิงก์ดาวน์โหลด |
-|--------------|-------------------|----------------|
-| Node.js      | 22 LTS            | https://nodejs.org |
-| Git          | ล่าสุด            | https://git-scm.com |
-| Docker       | ล่าสุด            | https://docker.com |
-| Docker Compose | v2+             | (รวมกับ Docker Desktop) |
+| รายการ | เวอร์ชันที่ต้องการ |
+|--------|------------------|
+| Node.js | 22 LTS |
+| Git | ล่าสุด |
+| Docker | ล่าสุด |
+| Docker Compose | v2+ |
 
 ---
 
-### On-Premises Setup
+### Local Setup (Docker Compose + Manual)
 
-> **ส่วนที่ 4.1 — การติดตั้งบนเครื่องตนเองในรูปแบบ On-Premises Server (8 คะแนน)**
+#### On-Premises Setup
+> **ส่วนที่ 4.1 — ติดตั้งบนเครื่องตนเองในรูปแบบ On-Premises Server (8 คะแนน)**
 
-#### ขั้นตอนการติดตั้ง
+**ขั้นตอนการติดตั้ง:**
 
 ```bash
 # 1. Clone Repository
@@ -311,52 +451,104 @@ cd Restaurant-Management-System-Exam-2025
 
 # 2. ตั้งค่า Environment Variables (Backend)
 cp backend/.env.example backend/.env
-# แก้ไข backend/.env ให้มีค่า:
+# เปิดไฟล์ backend/.env แล้วกรอกค่า:
 #   DATABASE_URL=postgresql://...
-#   JWT_SECRET=your-secret
+#   JWT_SECRET=...
 #   CORS_ORIGIN=http://localhost:5173
 #   NODE_ENV=development
 
 # 3. รัน Backend (Port 3001)
-cd backend
-npm install
-npm run dev
+cd backend && npm install && npm run dev
 
 # 4. รัน Frontend (Port 5173) — เปิด terminal ใหม่
-cd frontend
-npm install
-npm run dev
+cd frontend && npm install && npm run dev
 ```
 
-#### ผลการทดสอบ (Smoke Test — On-Premises)
+> ⚠️ **หมายเหตุเรื่อง Port**: ขั้นตอนกำหนด Backend Port 3001 แต่ URL หลักฐานในข้อสอบระบุ `localhost:3000/api/health`  
+> ให้ตรวจสอบค่า `PORT` ใน `backend/.env.example` ของ Repository จริง แล้วใช้ port ที่ระบบรันจริง
+
+#### การตั้งค่า Service / Port จริงที่ใช้ (Rubric 2.1 ข้อ 2)
+
+**✏️ กรอกค่าจริงที่ตั้งบนเครื่องของตนเอง**
+
+| Service | Port ที่รันจริง | ค่า CORS_ORIGIN ที่ตั้ง | ค่า VITE_API_URL ที่ตั้ง |
+|---------|---------------|------------------------|------------------------|
+| Backend API | | | — |
+| Frontend | | — | |
+
+#### ผล Smoke Test — On-Premises
+
+**✏️ ทดสอบหลังรัน Backend + Frontend สำเร็จ แล้วทำเครื่องหมายผล**
 
 | ทดสอบ | URL | ผลลัพธ์ที่คาดหวัง | ผ่าน/ไม่ผ่าน |
-|-------|-----|-------------------|--------------|
-| Backend Health | `http://localhost:3001/api/health` | `{"status":"ok"}` | ⬜ |
-| Frontend Login | `http://localhost:5173` | หน้า Login แสดงผลสำเร็จ | ⬜ |
+|-------|-----|-----------------|-------------|
+| Backend Health Check | `http://localhost:[port]/api/health` | `{"status":"ok"}` | ☐ |
+| Frontend Login | `http://localhost:5173` | หน้า Login แสดงผลสำเร็จ | ☐ |
 
-#### หลักฐาน (On-Premises)
+#### หลักฐาน On-Premises
 
-> 📸 **ภาพหน้าจอ Backend Health Check** (`http://localhost:3001/api/health`)
-> 
-> (วางภาพที่นี่)
+**รูปที่ 8 — Backend Health Check (`/api/health` ตอบ `{"status":"ok"}`)**
 
-> 📸 **ภาพหน้าจอ Frontend Login สำเร็จ** (`http://localhost:5173`)
->
-> (วางภาพที่นี่)
+`![On-Premises Backend Health](./tests/reports/onprem-backend-health.png)`
+
+**รูปที่ 9 — Frontend Login สำเร็จ**
+
+`![On-Premises Frontend Login](./tests/reports/onprem-frontend-login.png)`
 
 ---
 
-### Staging Environment (Docker Compose)
+#### Staging Environment (Docker Compose)
+> **ส่วนที่ 4.2 — ติดตั้งด้วย Docker Compose (8 คะแนน)**
 
-> **ส่วนที่ 4.2 — การติดตั้งด้วย Docker Compose (8 คะแนน)**
+**สิ่งที่ต้องแก้ไขใน `docker-compose.yml`:**
 
-#### สิ่งที่แก้ไขใน `docker-compose.yml`
+**✏️ ทำเครื่องหมาย ✅ เมื่อแก้ไขเสร็จแล้ว**
 
-- [x] เพิ่ม Environment Variables ครบถ้วน (`DATABASE_URL`, `JWT_SECRET`, `CORS_ORIGIN`, `VITE_API_URL`)
-- [x] กำหนด Port Mapping: backend → 3001, frontend → 80
-- [x] เพิ่ม Health Check สำหรับ backend service
-- [x] กำหนด `depends_on` ให้ frontend รอ backend พร้อมก่อน
+- [ ] เพิ่ม Environment Variables ครบถ้วน (`DATABASE_URL`, `JWT_SECRET`, `CORS_ORIGIN`, `VITE_API_URL`)
+- [ ] กำหนด Port Mapping: backend → 3001, frontend → 80
+- [ ] เพิ่ม Health Check สำหรับ backend service
+- [ ] กำหนด `depends_on` ให้ frontend รอ backend พร้อมก่อน
+
+#### Environment Variables ที่ตั้งค่าจริงใน `docker-compose.yml` (Rubric 2.2 ข้อ 2)
+
+**✏️ กรอกค่าจริงที่ใส่ใน docker-compose.yml (JWT_SECRET ไม่ต้องระบุค่าจริง)**
+
+| Variable | Service | ค่าที่ตั้งจริง |
+|----------|---------|--------------|
+| `DATABASE_URL` | backend | |
+| `JWT_SECRET` | backend | (ตั้งค่าแล้ว — ไม่ระบุค่าจริงเพื่อความปลอดภัย) |
+| `CORS_ORIGIN` | backend | |
+| `NODE_ENV` | backend | |
+| `VITE_API_URL` | frontend | |
+
+#### Multi-stage Build (Rubric 2.5 ข้อ 2)
+
+**✏️ ตรวจสอบ Dockerfile ของแต่ละ service แล้วระบุผล**
+
+| Service | มี Multi-stage Build | Stage ที่ใช้ (เช่น builder → runner) |
+|---------|--------------------|------------------------------------|
+| Backend | ☐ มี / ☐ ไม่มี | |
+| Frontend | ☐ มี / ☐ ไม่มี | |
+
+**รูปที่ 10 — Dockerfile แสดง Multi-stage build**
+
+`![Multi-stage Dockerfile](./tests/reports/dockerfile-multistage.png)`
+
+#### Volume Mapping (Rubric 2.5 ข้อ 4)
+
+**✏️ ระบุ Volume ที่กำหนดใน docker-compose.yml (ถ้าไม่มีให้ระบุ "ไม่มี Volume mapping")**
+
+| Volume Name / Path | Host Path | Container Path | วัตถุประสงค์ |
+|-------------------|-----------|----------------|-------------|
+| | | | |
+
+#### Network Configuration (Rubric 2.5 ข้อ 5)
+
+**✏️ ระบุ Network ที่กำหนดใน docker-compose.yml**
+
+| Network Name | Driver | Services ที่อยู่ใน Network นี้ |
+|-------------|--------|-------------------------------|
+| | | |
 
 #### คำสั่งรัน Staging
 
@@ -364,37 +556,39 @@ npm run dev
 docker compose up --build
 ```
 
-#### ผลการทดสอบ (Smoke Test — Staging)
+#### ผล Smoke Test — Staging
+
+**✏️ ทดสอบหลัง `docker compose up` สำเร็จ**
 
 | ทดสอบ | URL | ผลลัพธ์ที่คาดหวัง | ผ่าน/ไม่ผ่าน |
-|-------|-----|-------------------|--------------|
-| Backend Health | `http://localhost:3001/api/health` | `{"status":"ok"}` | ⬜ |
-| Frontend       | `http://localhost:80` | หน้า Login แสดงผลสำเร็จ | ⬜ |
+|-------|-----|-----------------|-------------|
+| Backend Health Check | `http://localhost:3001/api/health` | `{"status":"ok"}` | ☐ |
+| Frontend | `http://localhost:80` | หน้า Login แสดงผลสำเร็จ | ☐ |
 
-#### หลักฐาน (Staging)
+#### หลักฐาน Staging
 
-> 📸 **ภาพหน้าจอ `docker compose ps`** (ทุก Container สถานะ running)
->
-> (วางภาพที่นี่)
+**รูปที่ 11 — `docker compose ps` แสดงทุก Container สถานะ `running`**
+
+`![Docker Compose PS](./tests/reports/staging-docker-ps.png)`
 
 ---
 
 ### Neon.tech Database Setup
+> ส่วนที่ 5.1
 
-> **ส่วนที่ 5.1**
+**ขั้นตอน:**
+1. ไปที่ https://console.neon.tech → Create Project → PostgreSQL 16
+2. คัดลอก Connection String รูปแบบ: `postgresql://user:pass@ep-xxx.neon.tech/db?sslmode=require`
+3. นำไปใช้เป็นค่า `DATABASE_URL` ใน Backend
 
-#### ขั้นตอน
-1. ไปที่ https://console.neon.tech → Create Project → เลือก PostgreSQL 16
-2. คัดลอก Connection String (format: `postgresql://user:pass@ep-xxx.neon.tech/db?sslmode=require`)
-3. ใช้เป็นค่า `DATABASE_URL` ใน Backend
+**✏️ Connection String ที่ใช้จริง (เบลอ password ก่อนบันทึก):**
 
-**Connection String:** `postgresql://[user]:[pass]@[host].neon.tech/[db]?sslmode=require`
+`postgresql://[user]:***@[host].neon.tech/[db]?sslmode=require`
 
 ---
 
 ### Render + Vercel Deployment Steps
-
-> **ส่วนที่ 5.2 & 5.3**
+> ส่วนที่ 5.2 & 5.3
 
 #### Backend บน Render.com
 
@@ -415,57 +609,78 @@ Build Command:  npm run build
 
 ### Environment Variables Table
 
-| Variable      | Service   | ค่าตัวอย่าง / คำอธิบาย                         |
-|---------------|-----------|------------------------------------------------|
-| `DATABASE_URL` | Backend  | `postgresql://user:pass@host.neon.tech/db?sslmode=require` |
-| `JWT_SECRET`   | Backend  | random string ที่ปลอดภัย (≥ 32 ตัวอักษร)       |
-| `CORS_ORIGIN`  | Backend  | URL ของ Frontend เช่น `https://[app].vercel.app` |
-| `NODE_ENV`     | Backend  | `production`                                    |
-| `VITE_API_URL` | Frontend | URL ของ Backend เช่น `https://[api].onrender.com` |
+**✏️ กรอก URL จริงที่ได้หลัง Deploy (ใช้สำหรับตั้งค่าใน Render และ Vercel)**
+
+| Variable | Service | ค่าที่ตั้งจริงบน Cloud |
+|----------|---------|----------------------|
+| `DATABASE_URL` | Backend (Render) | |
+| `JWT_SECRET` | Backend (Render) | (ตั้งค่าแล้ว — ไม่ระบุ) |
+| `CORS_ORIGIN` | Backend (Render) | `https://[ชื่อ app ของตนเอง].vercel.app` |
+| `NODE_ENV` | Backend (Render) | `production` |
+| `VITE_API_URL` | Frontend (Vercel) | `https://[ชื่อ api ของตนเอง].onrender.com` |
 
 ---
 
 ### Smoke Test Results
+> ส่วนที่ 5.4 — ทดสอบ 4 Feature หลักบน Production
 
-> **ส่วนที่ 5.4 — ทดสอบ 4 Feature หลักบน Production**
+**✏️ ทดสอบบน Production URL จริง แล้วกรอกผลและแนบภาพหลักฐาน**
 
-| # | Feature          | คำสั่ง / ขั้นตอน                              | Expected               | หลักฐาน | ผ่าน/ไม่ผ่าน |
-|---|------------------|-----------------------------------------------|------------------------|---------|--------------|
-| 1 | Health Check     | `GET /api/health`                             | `{"status":"ok"}`      | 📸      | ⬜           |
-| 2 | Login            | Login ด้วย admin บน Frontend URL              | เข้าระบบสำเร็จ        | 📸      | ⬜           |
-| 3 | Open Order & Add | เปิดโต๊ะ → เพิ่มสินค้า → Confirm             | ออเดอร์ถูกบันทึก      | 📸      | ⬜           |
-| 4 | Payment          | ชำระเงิน → ตรวจสอบ change                    | คำนวณเงินทอนถูกต้อง   | 📸      | ⬜           |
+| # | Feature | ขั้นตอนทดสอบ | ผลลัพธ์ที่คาดหวัง | ผ่าน/ไม่ผ่าน |
+|---|---------|------------|-----------------|-------------|
+| 1 | Health Check | GET `/api/health` | `{"status":"ok"}` | ☐ |
+| 2 | Login | Login ด้วย admin บน Frontend URL | เข้าระบบสำเร็จ | ☐ |
+| 3 | Open Order & Add Item | เปิดโต๊ะ → เพิ่มสินค้า → Confirm | ออเดอร์ถูกบันทึก | ☐ |
+| 4 | Payment | ชำระเงิน → ตรวจสอบ change | คำนวณเงินทอนถูกต้อง | ☐ |
 
-**Production Smoke Test ผ่าน: ___ / 4 รายการ**
+**✏️ Production Smoke Test ผ่าน:** ___ / 4 รายการ
 
-> 📸 (วางภาพหน้าจอหลักฐานแต่ละ Feature)
+**รูปที่ 12 — Smoke Test Feature 1: Health Check**
+
+`![Smoke Test Health](./tests/reports/smoke-1-health.png)`
+
+**รูปที่ 13 — Smoke Test Feature 2: Login**
+
+`![Smoke Test Login](./tests/reports/smoke-2-login.png)`
+
+**รูปที่ 14 — Smoke Test Feature 3: Open Order**
+
+`![Smoke Test Order](./tests/reports/smoke-3-order.png)`
+
+**รูปที่ 15 — Smoke Test Feature 4: Payment**
+
+`![Smoke Test Payment](./tests/reports/smoke-4-payment.png)`
 
 ---
 
 ## CI/CD Pipeline + Newman Pass Rate
 
-> **ส่วนที่ 5.5**
+> ส่วนที่ 5.5
 
 ### สิ่งที่แก้ไขใน `.github/workflows/cicd.yml`
 
-- [x] เพิ่ม trigger เมื่อมีการ push ไปที่สาขาหลัก (`main` / `master`)
-- [x] เพิ่ม `actions/setup-node` สำหรับ Node.js version 22
-- [x] เพิ่ม step รัน Unit Test ของ Backend (`npm test`)
-- [x] เพิ่ม step ติดตั้งและรัน Newman
-- [x] เพิ่ม step `npm audit --audit-level=high` ทุกครั้งที่ push
+**✏️ ทำเครื่องหมาย ✅ เมื่อแก้ไขและทดสอบ Pipeline สำเร็จแล้ว**
 
-### Newman Pass Rate (จาก CI/CD Pipeline)
+- [ ] เพิ่ม trigger เมื่อมีการ push ไปที่สาขาหลัก (`main` / `master`)
+- [ ] เพิ่ม `actions/setup-node` สำหรับ Node.js version 22
+- [ ] เพิ่ม step รัน Unit Test ของ Backend (`npm test`)
+- [ ] เพิ่ม step ติดตั้งและรัน Newman
+- [ ] เพิ่ม step `npm audit --audit-level=high` ทั้ง backend และ frontend
 
-| Metric          | ค่า    |
-|-----------------|--------|
-| Total Tests     | ??     |
-| Tests Passed    | ??     |
-| Tests Failed    | ??     |
-| **Pass Rate**   | **??%** |
+### Newman Pass Rate จาก CI/CD Pipeline
 
-> 📸 **ภาพหน้าจอ GitHub Actions Pipeline สำเร็จ**
->
-> (วางภาพที่นี่)
+**✏️ กรอกตัวเลขจาก GitHub Actions log หลัง Pipeline รันสำเร็จ**
+
+| Metric | ค่าจริง |
+|--------|--------|
+| Total Tests | |
+| Tests Passed | |
+| Tests Failed | |
+| **Pass Rate** | **%** |
+
+**รูปที่ 16 — GitHub Actions Pipeline สำเร็จ (แสดง Newman Pass Rate ใน log)**
+
+`![CI/CD Pipeline](./tests/reports/cicd-pipeline-success.png)`
 
 ---
 
